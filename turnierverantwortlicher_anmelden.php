@@ -1,7 +1,7 @@
 <?php
     
     require_once 'includes/dhb.inc.php';
-    require_once 'includes/turnierverantwortlicher_registrieren.inc.php';
+    require_once 'includes/functions_turnierverantwortlichler_registrieren.inc.php';
 
     if (isset($_POST["turnierverantwortlicher_registrieren"]) == true){
 

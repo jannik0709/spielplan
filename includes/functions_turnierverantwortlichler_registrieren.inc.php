@@ -14,13 +14,13 @@
     function email_existiert($conn, $turnierverantwortlicher_email){
 
         // SQL Statement formulieren
-        $sql = "SELECT * FROM turnierverantwortlicher WHERE turnierverantwortlicher_email = ?;";
+        $sql = "SELECT * FROM turnier_verantwortlicher WHERE turnier_verantwortlicher_email = ?;";
 
         // Verbindung zur Datenbank herstellen
         $sql_statement = mysqli_stmt_init($conn);
 
         // Falls Fehler im Statement wird ein Fehler geworfen
-        if(!mysyli_stmt_prepare($sql_statement,$sql)){
+        if(!mysqli_stmt_prepare($sql_statement,$sql)){
             header("location: ../spielplan/turnierverantwortlicher_registrieren.php?error=statement_fehlgeschlagen");
             exit();
         }
@@ -51,10 +51,10 @@
     
     function registieren_turnierverantwortlicher($conn, $turnierverantwortlicher_email, $turnierverantwortlicher_passwort, $turnierverantwortlicher_name){
         
-        $sql = "INSERT INTO turnierverantwortlicher (turnierverantwortlicher_email, turnierverantwortlicher_passwort, turnierverantwortlicher_name ) VALUES (?,?,?);";
+        $sql = "INSERT INTO turnier_verantwortlicher (turnier_verantwortlicher_email, turnier_verantwortlicher_passwort, turnier_verantwortlicher_name ) VALUES (?,?,?);";
         $sql_statement = mysqli_stmt_init($conn);
 
-        if(!mysyli_stmt_prepare($sql_statement,$sql)){
+        if(!mysqli_stmt_prepare($sql_statement,$sql)){
             header("location: ../spielplan/turnierverantwortlicher_registrieren.php?error=statement_fehlgeschlagen");
             exit();
         }
