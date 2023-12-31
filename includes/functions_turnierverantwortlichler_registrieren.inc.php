@@ -61,7 +61,7 @@
 
         $hashedPwd = password_hash($turnierverantwortlicher_passwort, PASSWORD_DEFAULT);
 
-        mysqli_stmt_bind_param($sql_statement, "sss", $turnierverantwortlicher_email, $turnierverantwortlicher_passwort, $turnierverantwortlicher_name );
+        mysqli_stmt_bind_param($sql_statement, "sss", $turnierverantwortlicher_email, $hashedPwd, $turnierverantwortlicher_name );
         mysqli_stmt_execute($sql_statement);
         mysqli_stmt_close($sql_statement);
 
