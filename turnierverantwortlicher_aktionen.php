@@ -16,3 +16,49 @@ if (leeresEingabefeld($turnierverantwortlicher_email, $turnierverantwortlicher_p
 
 anmeldenTurnierverantwortlicher($conn, $turnierverantwortlicher_email, $turnierverantwortlicher_passwort);
 }
+
+?>
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Turnierverantwortlicher registrieren</title>
+        <meta name="description" content="Turnierverantwortlicher Aktionen>
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+
+    <fieldset>
+            <legend> Aktionen Turnierverantwortlicher</legend>
+
+                <form method = "POST" action = "turnier_erstellen.php">
+        
+                   <button type = "submit" name="turnierverantwortlicher_turnier_erstellen" > TURNIER erstellen</button>
+      
+                </form>
+
+                <br>
+
+                <form method = "POST" action = "turnier_bearbeiten.php">
+        
+                   <button type = "submit" name="turnierverantwortlicher_turnier_bearbeiten" > TURNIER bearbeiten </button>
+      
+                </form>
+
+                <br>
+
+                <form method = "POST" action = "turnier_löschen.php">
+        
+                   <button type = "submit" name="turnierverantwortlicher_turnier_löschen" > TURNIER löschen </button>
+      
+                </form>
+        
+        </fieldset>
+
+    </body>
+
+</html>
